@@ -20,3 +20,28 @@ school_data = {
     '2a': 13,
     '2b': 30
 }
+
+
+def incr_students(data, class_name):
+    if class_name in data:
+        data[class_name] += 1
+
+
+def decr_students(data, class_name):
+    if class_name in data and data[class_name] > 0:
+        data[class_name] -= 1
+
+
+def add_class(data, class_name):
+    if class_name not in data:
+        data.update({class_name: 0})
+
+
+def remove_class(data, class_name):
+    if class_name in data:
+        data.pop(class_name)
+
+
+def calc_students(data):
+    sum_student = sum(data.values())
+    return sum_student

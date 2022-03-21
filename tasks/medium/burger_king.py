@@ -38,3 +38,53 @@
     - курица
     - булка
 """
+
+
+def bread(func):
+    def wrepper():
+        print("</------------\\>")
+        func()
+        print("<\\____________/>")
+    return wrepper
+
+
+def tomato(func):
+    def wrepper():
+        print("*** помидоры ****")
+        func()
+    return wrepper
+
+
+def salad(func):
+    def wrepper():
+        print("~~~~ салат ~~~~~")
+        func()
+    return wrepper
+
+
+def cheese(func):
+    def wrepper():
+        print("^^^^^ сыр ^^^^^^")
+        func()
+    return wrepper
+
+
+def onion(func):
+    def wrepper():
+        print("----- лук ------")
+        func()
+    return wrepper
+
+
+@bread
+@onion
+@tomato
+def beef():
+    print("### говядина ###")
+
+
+@bread
+@cheese
+@salad
+def chicken():
+    print("|||| курица ||||")

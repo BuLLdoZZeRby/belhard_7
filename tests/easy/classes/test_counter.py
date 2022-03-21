@@ -1,6 +1,6 @@
 from collections.abc import Iterator
 
-from tasks.easy.classes.counter import Counter
+from belhard_7.tasks.easy.classes.counter import Counter
 
 
 def test_creation():
